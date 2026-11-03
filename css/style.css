@@ -1335,3 +1335,27 @@ body {
         padding-top: 40px;
     }
 }
+/* ENCABEZADO DE LOGIN */
+.pagina-login .navbar-rieb {
+    width: 100%;
+    min-height: 100px;
+    background-color: var(--azul-rieb);
+    padding: 12px 0;
+}
+
+.pagina-login .logo-rieb {
+    height: 75px;
+    width: auto;
+    object-fit: contain;
+}
+
+.pagina-login .btn-outline-light {
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.pagina-login .btn-outline-light:hover {
+    background-color: #FFFFFF;
+    color: var(--azul-rieb);
+}
