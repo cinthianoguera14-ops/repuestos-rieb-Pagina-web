@@ -1,4 +1,5 @@
 import { observarSesion, cerrarSesion } from "./auth.js";
+
 const API_URL = "https://script.google.com/macros/s/AKfycbzCcNmLmbAZoL4K0rulY9bENG4I7Q6PT3vhfMsUZZy5i10hP-dtDbNZQWKPElOgmVtofg/exec";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -9,6 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const buscador = document.getElementById("buscadorProductos");
 
     let productosCargados = [];
+
+    // Crear enlace de WhatsApp para cada sucursal
+    function enlaceWhatsApp(telefono, nombreProducto) {
+        const mensaje = `Hola, quisiera consultar por el producto: ${nombreProducto}. ¿Podrían brindarme más información?`;
+        return `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+    }
 
     // Mostrar los productos en pantalla
     function mostrarProductos(productos) {
@@ -30,15 +37,39 @@ document.addEventListener("DOMContentLoaded", () => {
             const stock = producto.Stock || 0;
             const estado = producto.Estado || "";
 
+            const whatsappLamarque = enlaceWhatsApp("5492984206194", nombre);
+            const whatsappChoele = enlaceWhatsApp("5492984619489", nombre);
+
             tarjeta.innerHTML = `
                 <div class="card h-100 shadow-sm">
                     ${imagen ? `<img src="${imagen}" class="card-img-top" alt="${nombre}" style="height:220px; object-fit:contain;">` : ""}
-                    <div class="card-body">
+
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title">${nombre}</h5>
                         <p class="text-muted">${categoria}</p>
                         <p>${descripcion}</p>
                         <p>Stock: ${stock}</p>
-                        <span class="badge bg-success">${estado}</span>
+                        <span class="badge bg-success mb-3">${estado}</span>
+
+                        <div class="mt-auto">
+                            <p class="fw-bold mb-2">Consultar por este producto:</p>
+
+                            <a href="${whatsappLamarque}"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="btn btn-success w-100 mb-2">
+                                <i class="bi bi-whatsapp"></i>
+                                Consultar en Lamarque
+                            </a>
+
+                            <a href="${whatsappChoele}"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="btn btn-outline-success w-100">
+                                <i class="bi bi-whatsapp"></i>
+                                Consultar en Choele Choel
+                            </a>
+                        </div>
                     </div>
                 </div>
             `;
