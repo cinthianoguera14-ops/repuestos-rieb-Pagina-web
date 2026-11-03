@@ -1404,19 +1404,26 @@ header.pagina-login {
 /* BANNER DE ACCESO */
 
 .login-banner {
-    min-height: 270px;
     display: flex;
     align-items: center;
+    min-height: 300px;
+    padding: 65px 0;
     color: #FFFFFF;
-    background:
+
+    background-image:
         linear-gradient(
             90deg,
-            rgba(37,16,94,.94),
-            rgba(37,16,94,.60)
+            rgba(37, 16, 94, 0.88),
+            rgba(37, 16, 94, 0.55)
         ),
-        url("../multimedia/motor-filtros.jpg")
-        center/cover no-repeat;
-    border-bottom: 5px solid var(--rojo-rieb);
+        url("../multimedia/motor-filtros.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-bottom: 5px solid #D71920;
+}
     padding: 55px 0;
 }
 
