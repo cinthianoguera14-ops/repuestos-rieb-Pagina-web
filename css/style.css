@@ -1354,6 +1354,114 @@ body {
     color: #FFFFFF;
     font-weight: 600;
 }
+/* =====================================
+   IDENTIDAD VISUAL - LOGIN
+===================================== */
+
+header.pagina-login {
+    width: 100%;
+    background-color: var(--azul-rieb);
+}
+
+.pagina-login .navbar-rieb {
+    min-height: 105px;
+    padding: 12px 0;
+}
+
+.pagina-login .logo-rieb {
+    height: 75px;
+    width: auto;
+}
+
+.marca-login {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+.marca-login strong {
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    letter-spacing: 1.5px;
+}
+
+.marca-login small {
+    color: #D7D2E8;
+    font-size: 0.75rem;
+}
+
+.pagina-login .btn-outline-light {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+    font-weight: 600;
+}
+
+.pagina-login .btn-outline-light:hover {
+    background: #FFFFFF;
+    color: var(--azul-rieb);
+}
+
+/* BANNER DE ACCESO */
+
+.login-banner {
+    min-height: 270px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(37,16,94,.94),
+            rgba(37,16,94,.60)
+        ),
+        url("../multimedia/motor-filtros.jpg")
+        center/cover no-repeat;
+    border-bottom: 5px solid var(--rojo-rieb);
+    padding: 55px 0;
+}
+
+.login-banner span {
+    color: #D7D2E8;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: .85rem;
+}
+
+.login-banner h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    margin: 12px 0;
+}
+
+.login-banner p {
+    font-size: 1.05rem;
+    max-width: 600px;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 576px) {
+    .pagina-login .navbar-rieb {
+        min-height: 90px;
+    }
+
+    .marca-login strong {
+        font-size: 1rem;
+    }
+
+    .marca-login small {
+        font-size: .65rem;
+    }
+
+    .pagina-login .logo-rieb {
+        height: 58px;
+    }
+
+    .login-banner {
+        min-height: 230px;
+        text-align: center;
+    }
+}
 
 .pagina-login .btn-outline-light:hover {
     background-color: #FFFFFF;
