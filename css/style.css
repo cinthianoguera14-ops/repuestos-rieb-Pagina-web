@@ -1462,6 +1462,57 @@ header.pagina-login {
         text-align: center;
     }
 }
+/* CORRECCION VISUAL DEL BANNER DE LOGIN */
+
+.login-banner {
+    display: flex !important;
+    align-items: center;
+    min-height: 300px;
+    padding: 65px 0;
+    color: #FFFFFF !important;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(37, 16, 94, 0.96),
+            rgba(37, 16, 94, 0.65)
+        ),
+        url("../multimedia/motor-filtros.jpg") center/cover no-repeat !important;
+
+    border-bottom: 5px solid #D71920;
+}
+
+.login-banner .container {
+    width: 100%;
+}
+
+.login-banner span {
+    color: #FFFFFF !important;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.login-banner h1 {
+    color: #FFFFFF !important;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    margin: 15px 0;
+}
+
+.login-banner p {
+    color: #FFFFFF !important;
+    font-size: 1.1rem;
+    max-width: 600px;
+}
+
+@media (max-width: 576px) {
+    .login-banner {
+        min-height: 240px;
+        padding: 45px 15px;
+        text-align: center;
+    }
+}
 
 .pagina-login .btn-outline-light:hover {
     background-color: #FFFFFF;
