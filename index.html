@@ -27,53 +27,57 @@
 
     <!-- ENCABEZADO Y NAVEGACIÓN -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark navbar-rieb">
+       <nav class="navbar navbar-expand-lg navbar-dark navbar-rieb shadow-sm">
+    <div class="container">
 
-            <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="multimedia/logo-rieb.jpg"
+                 alt="Logo Repuestos Rieb"
+                 class="logo-rieb">
+        </a>
 
-                <a class="navbar-brand" href="index.html">
-                    <img src="multimedia/logo-rieb.jpg" alt="Repuestos Rieb" class="logo-rieb">
-                </a>
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal"
+                aria-expanded="false"
+                aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
-                    aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav ms-auto">
 
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Inicio</a>
+                </li>
 
-                <div class="collapse navbar-collapse" id="menuPrincipal">
+                <li class="nav-item">
+                    <a class="nav-link" href="nosotros.html">Nosotros</a>
+                </li>
 
-                    <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="servicios.html">Servicios</a>
+                </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Inicio</a>
-                        </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="productos.html">Productos</a>
+                </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="nosotros.html">Nosotros</a>
-                        </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="servicios.html">Servicios</a>
-                        </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html" id="enlaceSesion">Ingresar</a>
+                </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="productos.html">Productos</a>
-                        </li>
+            </ul>
+        </div>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="login.html">Ingresar</a>
-                        </li>
-
-                    </ul>
-                </div>
-
-            </div>
-        </nav>
+    </div>
+</nav>
     </header>
 
 
